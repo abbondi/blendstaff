@@ -6,11 +6,88 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <title>BLEND</title>
 <link href='http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
+body {
+	margin:0;
+	padding:0;
+	background:#38373a;
+	overflow:hidden;
+}
+
+#sfondo {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: #38373a url(img/esagoni.png);
+	background-size:100% auto;
+	overflow:hidden;
+}
+
+#logo {
+	position:absolute;
+	top:80px;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(img/logo-rs.png) no-repeat;
+	background-size:100% auto;
+}
+
+.content {
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:80px;	
+}
+
+.contentscan {
+	position:absolute;
+	bottom:40px;
+	left:0;
+	width:100%;
+	height:80px;
+	
+}
+
 .button {
-border-radius:4px;
--webkit-border-radius:4px;	
+	position:relative;
+	top:0;
+	left:0;
+	width:96%;
+	height:76px;
+	border:1px solid #00c896;
+	margin:10px auto;
+	text-align:center;	
+	font-family: 'Ropa Sans', sans-serif;
+	font-size:24px;	
+	color:#fff;
+	background:#00c896;
+	cursor:pointer;
+	border-radius:4px;
+	-webkit-border-radius:4px;	
+}
+
+.button:hover {
+	background:#80e4cb;
+	color:#fff;
+}
+
+.buttonready {
+	position:relative;
+	top:0;
+	left:0;
+	width:96%;
+	height:76px;
+	margin:10px auto;
+	text-align:center;	
+	font-family: 'Ropa Sans', sans-serif;
+	font-size:24px;	
+	color:#fff;
+	border-radius:4px;
+	-webkit-border-radius:4px;	
 }
 
 .event {
@@ -56,23 +133,22 @@ function raggiungi(destinazione) {
 </script>
 </head>
 <body>
-<div id="header">
-	<div class="logo"><img src="img/logo.png" style="height:80px;width:100px;border:none;"></div>
-</div>
+<div id="sfondo"></div>
+<div id="logo"></div>
+
 <div class="content">
-	<div id="deviceready" class="button blink" style="border:none;">
+	<div id="deviceready" class="buttonready blink">
                 <p class="event listening">Preparazione lettore barcode...</p>
                 <p class="event received">Lettore barcode pronto</p>
     </div>
 </div>
-<div class="content">
-	<div class="button" id="scan" style="display:none;s">
+
+<div class="contentscan">
+	<div class="button  blink" id="scan" style="display:none;">
     <p>LEGGI QR</p>
     </div>
 </div>
-<div id="footer" style ="cursor:pointer;"  onClick="javascript:window.history.go(-1);">
-	<p style="text-align:center;color:#fff;font-family: 'Ropa Sans', sans-serif;">&laquo; BACK</p>
-</div>
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="barcodescanner.js"></script>
 <script type="text/javascript" src="js/scanner.js"></script>

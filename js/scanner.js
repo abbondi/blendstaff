@@ -44,7 +44,7 @@ var app = {
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        //receivedElement.setAttribute('style', 'display:block;');
 		document.getElementById('scan').setAttribute('style', 'display:block;');
 		//app.scan();		
         console.log('Received Event: ' + id);
@@ -71,10 +71,13 @@ var app = {
 			
 			scanner.scan(
 			function (result) {
-			alert("We got a barcode\n" +
-			"Result: " + result.text + "\n" +
-			"Format: " + result.format + "\n" +
-			"Cancelled: " + result.cancelled);
+				window.location.href = "http://www.zinilombardia2013.it/apps/blend/" + result.text + '&admin=1';
+				/*
+				alert("We got a barcode\n" +
+				"Result: " + result.text + "\n" +
+				"Format: " + result.format + "\n" +
+				"Cancelled: " + result.cancelled);
+				*/
 			},
 			function (error) {
 				alert("Errore nella scansione.\nCodice errore: " + error);
