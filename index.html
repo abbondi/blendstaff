@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BLEND</title>
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script>
+	
+	/* VARIABILI */	
+	var  autoid 			= "0";
+	var  email  			= "";
+	var  name  				= "";
+	var  birthday  			= "";
+	var  tessera  			= "";
+	var  amministratore  	= "";
+	var  appPath 			= "http://www.zinilombardia2013.it/apps/blend/"; //sessione.php?callback=?";
+	var	 appName 			= "blend";						
+	var  contatore			= 0;
+
+	$(document).ready(function () {
+		//controllo se esistono i dati in locale, altrimenti li prelevo dalla sessione remota (se non ci sono nemmeno lì re-indirizzo verso la pagina di login);
+		//window.location.href = appPath + 'index.html';
+		window.location.href = 'scanner.html';
+	});
+	
+	
+</script>
+</head>
+<body>
+</body>
+</html>
