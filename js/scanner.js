@@ -52,28 +52,42 @@ var app = {
 	
     scan: function() {
 		//alert ("apro fotocamera per la scansione.");
-        console.log('scanning');
-        try {
+       
+			
+			
+			/*
             window.plugins.barcodeScanner.scan(function(args) {
                 console.log("Scanner result: \n" +
                     "text: " + args.text + "\n" +
                     "format: " + args.format + "\n" +
                     "cancelled: " + args.cancelled + "\n");
-                /*
-                if (args.format == "QR_CODE") {
-                    window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-                }
-                */
+
 				window.location.href = "http://www.zinilombardia2013.it/apps/blend/" + args.text + '&admin=1';
-                //document.getElementById("info").innerHTML = args.text;
                 console.log(args);
         	});
-        } catch (ex) {
-			alert(ex.message);
-            console.log(ex.message);
-        }
+			*/
+			
+			var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+			
+			scanner.scan(
+			function (result) {
+			alert("We got a barcode\n" +
+			"Result: " + result.text + "\n" +
+			"Format: " + result.format + "\n" +
+			"Cancelled: " + result.cancelled);
+			},
+			function (error) {
+				alert("Errore nella scansione.\nCodice errore: " + error);
+			}
+			);			
+			
+			
+		
     }
 
 
 
 };
+
+
+//
