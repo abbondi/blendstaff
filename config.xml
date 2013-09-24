@@ -8,7 +8,7 @@
     <name>BLEND STAFF</name>
 
     <description>
-         BLEND STAFF Applicazione VIP Card
+         BLEND STAFF
     </description>
 
     <author href="http://www.massimoabbondi.it" email="magenta@massimoabbondi.it">
@@ -17,7 +17,9 @@
 
 	<access origin="*" />
 	
-    <gap:plugin name="BarcodeScanner"/>
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
 
     <feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
