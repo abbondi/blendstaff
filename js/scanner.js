@@ -62,7 +62,7 @@ var app = {
                     "format: " + args.format + "\n" +
                     "cancelled: " + args.cancelled + "\n");
 
-				window.location.href = "http://www.zinilombardia2013.it/apps/blend/" + args.text + '&admin=1';
+				window.location.href = "http://www.massimoabbondi.it/apps/blend/" + args.text + '&admin=1';
                 console.log(args);
         	});
 			*/
@@ -71,7 +71,7 @@ var app = {
 			
 			scanner.scan(
 			function (result) {
-				window.location.href = "http://www.zinilombardia2013.it/apps/blend/" + result.text + '&admin=1';
+				window.location.href = "http://www.massimoabbondi.it/apps/blend/" + result.text + '&admin=1';
 				/*
 				alert("We got a barcode\n" +
 				"Result: " + result.text + "\n" +
